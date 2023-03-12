@@ -59,15 +59,15 @@ public class ImageService : IImageService
 
         await storageProvider.SaveAsync(path, content.Content);
 
-        var image = new ImageEntity(path, content.Length, content.Description);
+        //var image = new ImageEntity(path, content.Length, content.Description);
 
-        //var image = new ImageEntity
-        //{
-        //    Id = SequentialGuidGenerator.Instance.NewGuid(),
-        //    Path = path,
-        //    Length = content.Length,
-        //    Description = content.Description
-        //};
+        var image = new ImageEntity
+        {
+            Id = SequentialGuidGenerator.Instance.NewGuid(),
+            Path = path,
+            Length = content.Length,
+            Description = content.Description
+        };
 
         await databaseService.CreateItemAsync(image);
 

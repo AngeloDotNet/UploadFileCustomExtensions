@@ -15,9 +15,9 @@ public class UploadFilesDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<ImageEntity>(entity =>
-        {
-            entity.ToTable("Images");
-        });
+        //modelBuilder.Entity<ImageEntity>(entity =>
+        //{
+        //    entity.ToTable("Images");
+        //});
     }
 }
