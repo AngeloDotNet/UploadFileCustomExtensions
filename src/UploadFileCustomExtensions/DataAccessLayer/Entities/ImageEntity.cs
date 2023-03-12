@@ -1,4 +1,4 @@
-﻿namespace UploadFileCustomExtensions.Entities;
+﻿namespace UploadFileCustomExtensions.DataAccessLayer.Entities;
 
 public class ImageEntity
 {
