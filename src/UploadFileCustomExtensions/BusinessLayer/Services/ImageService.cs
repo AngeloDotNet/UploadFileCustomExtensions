@@ -22,18 +22,6 @@ public class ImageService : IImageService
     public async Task<List<ImageResponse>> GetImagesAsync()
     {
         var imagesList = await databaseService.GetListItemAsync();
-
-        //var images = new List<ImageResponse>(
-        //    imagesList.Select(i => new ImageResponse
-        //    {
-        //        Id = i.Id,
-        //        Path = i.Path,
-        //        Length = i.Length,
-        //        ContentType = MimeMapping.MimeUtility.GetMimeMapping(i.Path),
-        //        Description = i.Description
-        //    })
-        //    .ToList());
-
         var images = mapper.Map<List<ImageResponse>>(imagesList);
 
         return images;
@@ -58,8 +46,6 @@ public class ImageService : IImageService
         var path = GetFullPath(content.FileName);
 
         await storageProvider.SaveAsync(path, content.Content);
-
-        //var image = new ImageEntity(path, content.Length, content.Description);
 
         var image = new ImageEntity
         {

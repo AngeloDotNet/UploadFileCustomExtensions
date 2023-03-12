@@ -14,10 +14,5 @@ public class UploadFilesDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-
-        //modelBuilder.Entity<ImageEntity>(entity =>
-        //{
-        //    entity.ToTable("Images");
-        //});
     }
 }
