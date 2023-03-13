@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using UploadFileCustomExtensions.StorageProviders.FileSystem;
-
-namespace UploadFileCustomExtensions.StorageProviders.Storage;
+﻿namespace UploadFileCustomExtensions.StorageProviders.Storage;
 
 public static class StorageProviderExtensions
 {
@@ -9,9 +6,11 @@ public static class StorageProviderExtensions
     {
         var settings = new FileSystemStorageSettings();
         configuration.Invoke(settings);
+
         services.AddSingleton(settings);
 
         services.AddScoped<IStorageProvider, FileSystemStorageProvider>();
+
         return services;
     }
 }

@@ -15,6 +15,7 @@ public class AllowedExtensionsAttribute : ValidationAttribute
         if (value is IFormFile file)
         {
             var extension = Path.GetExtension(file.FileName).ToLowerInvariant()[1..];
+
             if (!extensions.Contains(extension))
             {
                 return new ValidationResult(GetErrorMessage());
@@ -26,6 +27,6 @@ public class AllowedExtensionsAttribute : ValidationAttribute
 
     private string GetErrorMessage()
     {
-        return $"Sono supportati i file con le seguenti estensioni: {string.Join(",", extensions)}";
+        return $"Sono supportati solamente i file con le seguenti estensioni: {string.Join(",", extensions)}";
     }
 }
