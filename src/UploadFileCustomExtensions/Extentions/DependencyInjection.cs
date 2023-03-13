@@ -38,7 +38,7 @@ public static class DependencyInjection
 
         services
             .AddTransient<IImageService, ImageService>()
-            .AddTransient<IDatabaseService, DatabaseService>();
+            .AddTransient<IDatabaseImageService, DatabaseImageService>();
 
         return services;
     }

@@ -8,11 +8,11 @@ namespace UploadFileCustomExtensions.BusinessLayer.Services;
 
 public class ImageService : IImageService
 {
-    private readonly IDatabaseService databaseService;
+    private readonly IDatabaseImageService databaseService;
     private readonly IStorageProvider storageProvider;
     private readonly IMapper mapper;
 
-    public ImageService(IDatabaseService databaseService, IStorageProvider storageProvider, IMapper mapper)
+    public ImageService(IDatabaseImageService databaseService, IStorageProvider storageProvider, IMapper mapper)
     {
         this.databaseService = databaseService;
         this.storageProvider = storageProvider;
@@ -21,7 +21,7 @@ public class ImageService : IImageService
 
     public async Task<List<ImageResponse>> GetImagesAsync()
     {
-        var imagesList = await databaseService.GetListItemAsync();
+        var imagesList = await databaseService.GetListImagesAsync();
         var images = mapper.Map<List<ImageResponse>>(imagesList);
 
         return images;
@@ -29,7 +29,7 @@ public class ImageService : IImageService
 
     public async Task<(Stream Stream, string ContentType)?> GetImageAsync(Guid id)
     {
-        var image = await databaseService.GetItemAsync(id);
+        var image = await databaseService.GetImageAsync(id);
 
         if (image == null)
         {
@@ -41,7 +41,7 @@ public class ImageService : IImageService
         return (stream, MimeMapping.MimeUtility.GetMimeMapping(image.Path));
     }
 
-    public async Task<bool> UploadAsync(StreamFileContent content)
+    public async Task<bool> UploadImageAsync(StreamFileContent content)
     {
         var path = GetFullPath(content.FileName);
 
@@ -55,21 +55,21 @@ public class ImageService : IImageService
             Description = content.Description
         };
 
-        await databaseService.CreateItemAsync(image);
+        await databaseService.CreateImageAsync(image);
 
         return true;
     }
 
-    public async Task<bool> DeleteAsync(Guid id)
+    public async Task<bool> DeleteImageAsync(Guid id)
     {
-        var image = await databaseService.GetItemAsync(id);
+        var image = await databaseService.GetImageAsync(id);
 
         if (image == null)
         {
             return false;
         }
 
-        await databaseService.DeleteItemAsync(image);
+        await databaseService.DeleteImageAsync(image);
         await storageProvider.DeleteAsync(image.Path);
 
         return true;

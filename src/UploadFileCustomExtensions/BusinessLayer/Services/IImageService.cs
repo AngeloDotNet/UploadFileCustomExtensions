@@ -7,6 +7,6 @@ public interface IImageService
 {
     Task<List<ImageResponse>> GetImagesAsync();
     Task<(Stream Stream, string ContentType)?> GetImageAsync(Guid id);
-    Task<bool> UploadAsync(StreamFileContent content);
-    Task<bool> DeleteAsync(Guid id);
+    Task<bool> UploadImageAsync(StreamFileContent content);
+    Task<bool> DeleteImageAsync(Guid id);
 }
