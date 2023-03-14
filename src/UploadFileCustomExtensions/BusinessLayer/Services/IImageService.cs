@@ -1,7 +1,4 @@
-﻿using UploadFileCustomExtensions.BusinessLayer.Models;
-using UploadFileCustomExtensions.Shared.Models;
-
-namespace UploadFileCustomExtensions.BusinessLayer.Services;
+﻿namespace UploadFileCustomExtensions.BusinessLayer.Services;
 
 public interface IImageService
 {

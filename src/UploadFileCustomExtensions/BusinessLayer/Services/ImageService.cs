@@ -1,10 +1,4 @@
-﻿using UploadFileCustomExtensions.BusinessLayer.Models;
-using UploadFileCustomExtensions.DataAccessLayer.Entities;
-using UploadFileCustomExtensions.DataAccessLayer.Services;
-using UploadFileCustomExtensions.Shared.Models;
-using UploadFileCustomExtensions.StorageProviders.Storage;
-
-namespace UploadFileCustomExtensions.BusinessLayer.Services;
+﻿namespace UploadFileCustomExtensions.BusinessLayer.Services;
 
 public class ImageService : IImageService
 {
