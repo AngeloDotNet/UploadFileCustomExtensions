@@ -1,7 +1,4 @@
-﻿using UploadFileCustomExtensions.DataAccessLayer.Entities;
-using UploadFileCustomExtensions.Shared.Models;
-
-namespace UploadFileCustomExtensions.BusinessLayer.Mappers;
+﻿namespace UploadFileCustomExtensions.BusinessLayer.Mappers;
 
 public class MapperProfile : Profile
 {
