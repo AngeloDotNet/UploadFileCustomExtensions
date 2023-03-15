@@ -1,4 +1,4 @@
-﻿namespace UploadFileCustomExtensions.Extentions;
+﻿namespace UploadFileCustomExtensions.Extensions;
 
 public static class UploadImageRequestExtensions
 {
