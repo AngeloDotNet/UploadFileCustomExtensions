@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using UploadFileCustomExtensions.Filters;
-
-namespace UploadFileCustomExtensions.Shared.Models;
+﻿namespace UploadFileCustomExtensions.Shared.Models;
 
 public class ImageRequest
 {
