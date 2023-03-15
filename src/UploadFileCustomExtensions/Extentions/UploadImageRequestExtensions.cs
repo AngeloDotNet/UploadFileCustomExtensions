@@ -1,7 +1,4 @@
-﻿using UploadFileCustomExtensions.BusinessLayer.Models;
-using UploadFileCustomExtensions.Shared.Models;
-
-namespace UploadFileCustomExtensions.Extentions;
+﻿namespace UploadFileCustomExtensions.Extentions;
 
 public static class UploadImageRequestExtensions
 {

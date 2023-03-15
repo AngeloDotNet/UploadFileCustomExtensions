@@ -1,13 +1,4 @@
-﻿using EFCoreGeneric.Infrastructure.Interfaces;
-using EFCoreGeneric.Infrastructure.Repository;
-using Microsoft.EntityFrameworkCore;
-using UploadFileCustomExtensions.BusinessLayer.Mappers;
-using UploadFileCustomExtensions.BusinessLayer.Services;
-using UploadFileCustomExtensions.DataAccessLayer;
-using UploadFileCustomExtensions.DataAccessLayer.Services;
-using UploadFileCustomExtensions.StorageProviders.Storage;
-
-namespace UploadFileCustomExtensions.Extentions;
+﻿namespace UploadFileCustomExtensions.Extentions;
 
 public static class DependencyInjection
 {
