@@ -1,6 +1,4 @@
-﻿using UploadFileCustomExtensions.StorageProviders.Storage;
-
-namespace UploadFileCustomExtensions.StorageProviders.FileSystem;
+﻿namespace UploadFileCustomExtensions.StorageProviders.FileSystem;
 
 internal class FileSystemStorageProvider : IStorageProvider
 {
