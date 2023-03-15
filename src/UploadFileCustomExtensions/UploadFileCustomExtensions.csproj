@@ -9,10 +9,14 @@
 
     <PropertyGroup>
         <TargetFrameworks>net6.0</TargetFrameworks>
-        <Description>upload file custom extension library</Description>
+        <Authors>Angelo Pirola</Authors>
+        <Product>.NET library upload various files custom extension</Product>
+        <Description>upload various files custom extension library</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/AngeloDotNet/UploadFileCustomExtensions</PackageProjectUrl>
+        <PackageTags>csharp net6 upload files custom extensions library</PackageTags>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/AngeloDotNet/UploadFileCustomExtensions</RepositoryUrl>
+        <RepositoryUrl>https://github.com/AngeloDotNet/UploadFileCustomExtensions.git</RepositoryUrl>
         <RepositoryBranch>main</RepositoryBranch>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
