@@ -1,6 +1,4 @@
-﻿using UploadFileCustomExtensions.DataAccessLayer.Entities;
-
-namespace UploadFileCustomExtensions.DataAccessLayer.Services;
+﻿namespace UploadFileCustomExtensions.DataAccessLayer.Services;
 
 public interface IDatabaseImageService
 {

@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using UploadFileCustomExtensions.DataAccessLayer.Entities;
-
-namespace UploadFileCustomExtensions.DataAccessLayer;
+﻿namespace UploadFileCustomExtensions.DataAccessLayer;
 
 public class UploadFilesDbContext : DbContext
 {
