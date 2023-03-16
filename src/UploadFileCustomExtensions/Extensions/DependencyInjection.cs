@@ -2,7 +2,7 @@
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddStorageProviderService(this IServiceCollection services, IConfiguration Configuration)
+    public static IServiceCollection AddUploadFileStorageProviderService(this IServiceCollection services, IConfiguration Configuration)
     {
         services.AddFileSystemStorageProvider(options =>
         {
@@ -12,7 +12,7 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IServiceCollection AddDataAccessLayerRegistration(this IServiceCollection services)
+    public static IServiceCollection AddUploadFileDataAccessLayerRegistration(this IServiceCollection services)
     {
         services
             .AddScoped<DbContext, UploadFilesDbContext>()
@@ -23,7 +23,7 @@ public static class DependencyInjection
         return services;
     }
 
-    public static IServiceCollection AddBusinessLayerServices(this IServiceCollection services)
+    public static IServiceCollection AddUploadFileServices(this IServiceCollection services)
     {
         services.AddAutoMapper(typeof(MapperProfile).Assembly);
 
